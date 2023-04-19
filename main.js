@@ -12,8 +12,12 @@ fetch('https://api.opendota.com/api/proMatches')
                    const direTeam = document.createElement('td')
                    const tr = document.createElement('tr')
 
-                   matchId.innerText = post.match_id                   
-                   duration.innerText = post.duration
+                   function padTo2Digits(num) {
+                    return num.toString().padStart(2, 0)
+                   }
+
+                   matchId.innerText =  post.match_id
+                   duration.innerText = `${padTo2Digits(Math.floor(post.duration / 60))}:${padTo2Digits(post.duration % 60)}` 
                    radiantTeam.innerText = post.radiant_name
                    direTeam.innerText = post.dire_name
 
