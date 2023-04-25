@@ -69,3 +69,7 @@ tr:hover {
     color: white;
     font-size: 36px;
 }
+
+#content {
+    display: none;
+}
