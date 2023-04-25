@@ -20,19 +20,25 @@ table {
 }     
     
 th {
-    font-size: 28px;
+    font-size: 24px;
     padding: 16px;
     color: white;
-    border-bottom: 1px solid #b6b6b6;  
+    border-bottom: 1px solid #b6b6b6;
+    cursor: auto;  
 }
    
 td {
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
     padding: 80px;
     color: white;
     border-top: 1px solid #b6b6b6;
     border-bottom: 1px solid #b6b6b6;
+}
+
+tr:hover {
+    background: #1b2838;
+    cursor: pointer;
 }
 
 .main-header {
@@ -61,5 +67,5 @@ td {
     font-family: "TNR";
     font-weight: normal;
     color: white;
-    font-size: 40px;
+    font-size: 36px;
 }

@@ -1,5 +1,3 @@
-import moment from 'moment'
-
 const matchHistory = document.getElementById('match-history')
 
 fetch('https://api.opendota.com/api/proMatches')
@@ -11,15 +9,15 @@ fetch('https://api.opendota.com/api/proMatches')
                    const radiantTeam = document.createElement('td')
                    const direTeam = document.createElement('td')
                    const tr = document.createElement('tr')
-
+                   
                    function padTo2Digits(num) {
                     return num.toString().padStart(2, 0)
                    }
 
-                   matchId.innerText =  post.match_id
+                   matchId.innerText = post.match_id 
                    duration.innerText = `${padTo2Digits(Math.floor(post.duration / 60))}:${padTo2Digits(post.duration % 60)}` 
                    radiantTeam.innerText = post.radiant_name
-                   direTeam.innerText = post.dire_name
+                   direTeam.innerText = post.dire_name 
 
                    tr.appendChild(matchId)
                    tr.appendChild(duration)
@@ -29,6 +27,16 @@ fetch('https://api.opendota.com/api/proMatches')
                    matchHistory.appendChild(tr)
            })
    })
+
+   document.getElementById('match-history').addEventListener('click', function() {
+    document.getElementById('content').style.display = 'block'
+    document.getElementById('viewer').style.display = 'none'
+   })
+   document.getElementById('content').addEventListener('click', function() {
+    document.getElementById('viewer').style.display = 'block'
+    document.getElementById('content').style.display = 'none'
+   })
+
 
 
 
