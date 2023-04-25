@@ -32,7 +32,7 @@ fetch('https://api.opendota.com/api/proMatches')
     document.getElementById('content').style.display = 'block'
     document.getElementById('viewer').style.display = 'none'
    })
-   document.getElementById('content').addEventListener('click', function() {
+   document.getElementById('back').addEventListener('click', function() {
     document.getElementById('viewer').style.display = 'block'
     document.getElementById('content').style.display = 'none'
    })

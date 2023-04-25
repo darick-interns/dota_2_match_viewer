@@ -73,3 +73,15 @@ tr:hover {
 #content {
     display: none;
 }
+
+#back {
+    background: #2a475e;
+    border-radius: 5px;
+    font-size: 24px;
+    float: right;
+    font-weight: bold;
+}
+
+#back:hover {
+    background: rgba(178, 41, 34, .7);
+}
